@@ -1,0 +1,24 @@
+{
+  "name": "hairapy-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon -e js,html,css ./src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianP5/hairapy-admin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianP5/hairapy-admin/issues"
+  },
+  "homepage": "https://github.com/ChristianP5/hairapy-admin#readme",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.9",
+    "@hapi/inert": "^7.1.0",
+    "dotenv": "^16.4.5"
+  }
+}
