@@ -1,58 +1,180 @@
-*{
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+
+}
+
+*{    
     padding: 0;
     margin: 0;
     list-style: none;
+    
 }
 
 
 html{
-    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     padding: 0;
     margin: 0;
 }
 
-body{
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
+html, body {
+    height: 100%;
+    overflow: hidden;
 }
 
-.focus{
+
+/* .focus{
     background-color: red;
-}
+} */
 
 /* NAV CSS START */
 header{
-    width: 30%;
+    width: 20%;
     height: 100vh;
-    background-color: gold;
 }
 
 .nav-options{
     margin: 20px 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+
+
+.nav-options a {
+    text-decoration: none; 
+  }
+
+.nav-options p{
+    padding: 15px;
 }
 
 .nav-options>li{
 
 }
 
+
 .nav-option{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 0px; 
+    margin: 0px 0px 0px 20px;
 }
 
+
+
 .nav-icon{
-    background-color: aquamarine;
-    width: 30%;
+    width: 15%;
+    margin-right: 20px;
 }
+
 
 .nav-icon>img{
     width: 100%;
 }
 
+
 .nav-text{
-    background-color: rgb(47, 255, 0);
     width: 50%;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #C69E4C;
+
 }
+
+
+.nav-option.active .nav-text p {
+    color: white;
+}
+
+.nav-options li.active {
+    background-color: #C69E4C;
+}
+
+
+.log-out{
+    color: #FF5757;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 120px;
+    margin-top: 250px;
+}
+
+.log-out a{
+    text-decoration: none;
+    color:#FF5757
+}
+
+/* Main CSS start */
+
+.vertical-line {
+    border-left: 2px solid black;
+    height: 775px; 
+    margin-right: 10px;
+    margin-top: 20px;
+    
+}
+
+main{
+    font-size: 3em;
+    display: flex;
+    padding: 20px;
+}
+
+.dashboard-page {
+    padding: 30px;
+    margin-bottom: 1000px;
+}
+
+.predictions-box{
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #EFEFEF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    
+
+}
+
+.users-box{
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #EFEFEF;
+
+}
+
+.articles-box{
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: #EFEFEF;
+
+}
+
+.predictions-box, .articles-box, .users-box{
+    border: 2px solid #EFEFEF;
+    width: 550px;
+    height: 250px;
+    padding-right: 100px;
+}
+
+.boxes p{
+    font-size: 4em;
+    font-weight: normal;
+    padding-top: 20px;
+    padding-left: 300px;
+}
+
+.box-row{
+    display: flex;
+}
+
+.boxes{
+    font-size: 0.4em;
+}
+

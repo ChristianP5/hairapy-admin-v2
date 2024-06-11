@@ -10,58 +10,83 @@
   <body>
     <header>
       <ul class="nav-options focus">
-        <li>
-          <a href="">
+        <li class = "dashboard-option">
+          <a href="http://localhost:9000/index.html">
             <div id="home-option" class="nav-option">
               <div class="nav-icon">
                 <img src="img/home_brown.png" alt="" />
               </div>
-              <div class="nav-text">
-                <p>Home</p>
+              <div class="nav-text dashboard-text">
+                <p>Dashboard</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="http://localhost:9000/predictions.html">
             <div id="predictions-option" class="nav-option">
               <div class="nav-icon">
-                <img src="img/home_brown.png" alt="" />
+                <img src="img/predictions_brown.png" alt="" />
               </div>
               <div class="nav-text">
-                <p>Home</p>
+                <p>Predictions</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="http://localhost:9000/articles.html">
             <div id="articles-option" class="nav-option">
               <div class="nav-icon">
-                <img src="img/home_brown.png" alt="" />
+                <img src="img/articles_brown.png" alt="" />
               </div>
               <div class="nav-text">
-                <p>Home</p>
+                <p>Article</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="http://localhost:9000/users.html">
             <div id="users-option" class="nav-option">
               <div class="nav-icon">
-                <img src="img/home_brown.png" alt="" />
+                <img src="img/users_brown.png" alt="" />
               </div>
               <div class="nav-text">
-                <p>Home</p>
+                <p>Users</p>
               </div>
             </div>
           </a>
         </li>
       </ul>
+      <div class = "log-out">
+        <a href ="http://localhost:9000/login.html">
+          <p> Logout</p>
+        </a>
+      </div>
     </header>
     <main>
-      <h1>DASHBOARD</h1>
+      <div class="vertical-line"></div>
+        <div class ="dashboard-page">
+          <h1>DASHBOARD<h1>
+            <div class="boxes">
+              <div class = "box-row">
+                <div class = "predictions-box"> 
+                  Predictions
+                  <p>100</p>
+                </div>
+                <div class = "articles-box">
+                  Articles 
+                  <p>100</p>
+                </div>  
+              </div>
+                <div class = "users-box"> 
+                  Users
+                  <p>100</p>
+                </div>  
+            </div>
+        </div>
+
     </main>
   </body>
 </html>

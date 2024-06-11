@@ -1,0 +1,146 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+
+}
+
+*{    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+
+html{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* .focus{
+    background-color: red;
+} */
+
+/* NAV CSS START */
+header{
+    width: 20%;
+    height: 100vh;
+}
+
+.nav-options{
+    margin: 20px 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+
+
+.nav-options a {
+    text-decoration: none; 
+  }
+
+.nav-options p{
+    padding: 15px;
+}
+
+.nav-options>li{
+
+}
+
+.nav-option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px; 
+    margin: 0px 0px 0px 20px;
+}
+
+
+
+.nav-icon{
+    width: 15%;
+    margin-right: 20px;
+}
+
+
+.nav-icon>img{
+    width: 100%;
+}
+
+
+.nav-text{
+    width: 50%;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #C69E4C;
+
+}
+
+.nav-option.active .nav-text p {
+    color: white;
+}
+
+.nav-options li.active {
+    background-color: #C69E4C;
+}
+
+
+.log-out{
+    color: #FF5757;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 120px;
+    margin-top: 250px;
+}
+
+.log-out a{
+    text-decoration: none;
+    color:#FF5757
+}
+
+/* Main CSS start */
+
+.vertical-line {
+    border-left: 2px solid black;
+    height: 775px; 
+    margin-right: 10px;
+    margin-top: 20px;
+    
+}
+
+main{
+    font-size: 3em;
+    display: flex;
+    padding: 20px;
+}
+
+.users-page{
+    padding: 30px;
+    margin-bottom: 1000px;
+}
+
+.username-details{
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.username-title{
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.username-content{
+    font-size: 0.75em;
+    font-weight: normal;
+    padding-top: 40px;
+}

@@ -1,0 +1,252 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+
+}
+
+*{    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+
+html{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* .focus{
+    background-color: red;
+} */
+
+
+/* NAV CSS START */
+header{
+    width: 20%;
+    height: 100vh;
+}
+
+.nav-options{
+    margin: 20px 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+
+
+.nav-options a {
+    text-decoration: none; 
+  }
+
+.nav-options p{
+    padding: 15px;
+}
+
+.nav-options>li{
+
+}
+/* 
+.dashboard-option{
+    background-color: #C69E4C;
+} */
+
+.nav-option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px; 
+    margin: 0px 0px 0px 20px;
+}
+
+
+
+.nav-icon{
+    width: 15%;
+    margin-right: 20px;
+}
+
+
+.nav-icon>img{
+    width: 100%;
+}
+
+
+.nav-text{
+    width: 50%;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #C69E4C;
+
+}
+
+
+.nav-option.active .nav-text p {
+    color: white;
+}
+
+.nav-options li.active {
+    background-color: #C69E4C;
+}
+
+
+.log-out{
+    color: #FF5757;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 120px;
+    margin-top: 250px;
+}
+
+.log-out a{
+    text-decoration: none;
+    color:#FF5757
+}
+
+/* Main CSS start */
+
+.vertical-line {
+    border-left: 2px solid black;
+    height: 775px; 
+    margin-right: 10px;
+    margin-top: 20px;
+    
+}
+
+main{
+    font-size: 3em;
+    display: flex;
+    padding: 20px;
+}
+
+.article-page{
+    padding: 30px;
+    margin-bottom: 1000px;
+}
+
+.articles-box{
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #EFEFEF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 2px solid #EFEFEF;
+    display: flex;
+    width: 1300px;
+    height: 250px;
+
+}
+
+.boxes{
+    font-size: 0.4em;
+}
+
+.article-img{
+    width: 250px;
+    height: 250px;
+}
+
+.article-details{
+    margin-left: 30px;
+    margin-top: 50px;
+    font-size: 2em;
+    margin-right: 490px;
+}
+
+.article-title{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.article-content{
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+.article-date{
+    font-size: 0.5em;
+    font-weight: normal;
+
+}
+
+.article-buttons{
+    padding-top: 30px;
+}
+.create-button{
+    width: 170px;
+    height: 70px;
+    background-color: #00BF63;
+    padding:20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    color: white;
+    margin-left: 700px;
+    margin-top: 20px;
+}
+
+
+.edit-button{
+    width: 170px;
+    height: 70px;
+    background-color: #5271FF;
+    padding:20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    color: white;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.delete-button{
+    width: 170px;
+    height: 70px;
+    background-color: #FF5757;
+    padding:20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    color: white;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+.plus-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.article-head{
+    display: flex;
+}
+
+.article-head a, .articles-box a{
+    text-decoration: none;
+}
+
+.prediction-row{
+    display: flex;
+}

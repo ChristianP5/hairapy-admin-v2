@@ -1,0 +1,86 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 100px;
+
+}
+
+.login-title{
+    font-size: 2.5em;
+    text-align: center;
+}
+.admin-box{
+    background-color: #C69E4C;
+    font-size: 1.75em;
+    width:540px;
+    height: 100px;
+    margin: auto;
+    padding-top: 1px;
+    position: absolute;
+    top: 32%;
+    left: 35%;
+    z-index: 1;
+    
+
+}
+
+.admin-box h2{
+    text-align: center;
+}
+
+.signin-box{
+    background-color: #5271FF;
+    font-size: 1.5em;
+    margin: auto;
+    width: 800px;
+    height: 75px;
+    margin-top: 30px;
+    border-radius: 5px;
+
+
+}
+
+.admin-box, .signin-box{
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+
+.credentials-box{
+    padding: 20px;
+    padding-top: 100px;
+    background-color: #EFEFEF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 2px solid #EFEFEF;
+    width: 800px;
+    height: 250px;
+    margin: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.username-input input[type="text"],
+.password-input input[type="text"]{
+    width: 700px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.password-input input[type="text"]{
+    margin-top: 20px;
+}
+
+.signin-box a {
+    text-decoration: none;
+    color: white;
+}

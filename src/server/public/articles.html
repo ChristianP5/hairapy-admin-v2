@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/articles.css" />
+    <script src="js/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <ul class="nav-options focus">
+        <li>
+            <a href="http://localhost:9000/index.html">
+                <div id="home-option" class="nav-option">
+              <div class="nav-icon">
+                <img src="img/home_brown.png" alt="" />
+              </div>
+              <div class="nav-text">
+                <p>Dashboard</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:9000/predictions.html">
+            <div id="predictions-option" class="nav-option">
+              <div class="nav-icon">
+                <img src="img/predictions_brown.png" alt="" />
+              </div>
+              <div class="nav-text">
+                <p>Predictions</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:9000/articles.html">
+            <div id="articles-option" class="nav-option">
+              <div class="nav-icon">
+                <img src="img/articles_brown.png" alt="" />
+              </div>
+              <div class="nav-text">
+                <p>Article</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:9000/users.html">
+            <div id="users-option" class="nav-option">
+              <div class="nav-icon">
+                <img src="img/users_brown.png" alt="" />
+              </div>
+              <div class="nav-text">
+                <p>Users</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class = "log-out">
+        <a href ="http://localhost:9000/login.html">
+          <p> Logout</p>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="vertical-line"></div>
+      <div class="article-page">
+        <div class="article-head">
+          <h1>Articles<h1>
+            <a href="http://localhost:9000/createArticles.html">
+              <button class = "create-button" >
+                <img class ="plus-icon" src = "img/plus_sign.png">
+                Create
+              </button>
+            </a>
+        </div>
+
+        <div class="boxes">
+            <div class = "articles-box"> 
+              <div> 
+                <img class = "article-img" src = "img/placeholder.png"> 
+              </div>
+
+
+                  <div class ="article-details">
+                    <p class = "article-title">Article Title</p>
+                    <p class = "article-content">Article Content</p>
+                    <p class = "article-date"><br>Date: DDMMYYYY</p>
+                </div>
+                <div class="article-buttons">
+                  <a href="http://localhost:9000/editArticle.html">
+                    <button class = "edit-button">
+                      Edit
+                    </button>
+                  </a>
+                  <button class = "delete-button">
+                    Delete
+                  </button>
+                </div>
+
+          </div>
+
+          <div class = "articles-box"> 
+            <div> 
+              <img class = "article-img" src = "img/placeholder.png"> 
+            </div>
+              <div class ="article-details">
+                <p class = "article-title">Article Title</p>
+                <p class = "article-content">Article Content</p>
+                <p class = "article-date"><br>Date: DDMMYYYY</p>
+            </div>
+            <div class="article-buttons">
+              <a href="http://localhost:9000/editArticle.html">
+                <button class = "edit-button">
+                  Edit
+                </button>
+              </a>
+                <button class = "delete-button">
+                  Delete
+                </button>
+            </div>
+        </div>
+        </div>
+
+        
+      </div>
+      
+
+    </main>
+  </body>
+</html>
