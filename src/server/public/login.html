@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/login.css" />
-
-</head>
-<body>
-    <div class = "login-title">
-        <h1>HAIRAPY</h1>
+    <script src="js/env.js"></script>
+    <script src="js/login.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <div class="login-title">
+      <h1 id="hairapy-admin-title"></h1>
     </div>
 
-    <div class = "admin-box">
+    
+    <form id="login-form" action="" method="post">
+    <div class="credentials-box">
+      <div class="admin-box">
         <h2>Admin</h2>
+      </div>
+      <section class="credentials-form">
+        <section class="credentials-left">
+          <div class="username-input">
+            <input
+              type="text"
+              id="input-username"
+              name="username"
+              placeholder="Username"
+            />
+          </div>
+          <div class="password-input">
+            <input
+              type="password"
+              id="input-password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+        </section>
+        <section class="credentials-right">
+          <div class="g-recaptcha" data-sitekey="6LeCVvcpAAAAAKRYXT7Ga1diIOxLw7aMfIXOHCS3"></div>
+  
+        <input class="login-box" type="submit" value="Log In" id="input-submit">
+        </section>
+      </section>
+    </form>
     </div>
-    
-        <div class = "credentials-box">
-
-            <div class = "username-input">
-                <input type = "text" id = "username" name="username" placeholder="Username">
-            </div>
-            <div class = "password-input">
-                <input type = "text" id = "password" name="password" placeholder="Password">
-            </div>
-
-            <div class = "signin-box">
-                <a href="http://localhost:9000/index.html">
-                    <h2>Sign In</h2>
-                </a>
-            </div>
-        </div>
-    
-</body>
+  </body>
 </html>

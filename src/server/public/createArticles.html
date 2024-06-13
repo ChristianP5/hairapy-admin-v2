@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/createArticles.css" />
+    <script src="js/env.js"></script>
+    <script src="js/isValidLogin.js"></script>
+    <script src="js/createArticle.js"></script>
+    <script src="js/logout.js"></script>
     <script src="js/index.js"></script>
     <title>Document</title>
   </head>
@@ -11,8 +15,8 @@
     <header>
       <ul class="nav-options focus">
         <li>
-            <a href="http://localhost:9000/index.html">
-                <div id="home-option" class="nav-option">
+          <a href="http://localhost:9000/index.html">
+            <div id="home-option" class="nav-option">
               <div class="nav-icon">
                 <img src="img/home_brown.png" alt="" />
               </div>
@@ -59,51 +63,53 @@
           </a>
         </li>
       </ul>
-      <div class = "log-out">
-        <a href ="http://localhost:9000/login.html">
-          <p> Logout</p>
+      <div id="log-out-button" class="log-out">
+        <a href="http://localhost:9000/login.html">
+          <p>Logout</p>
         </a>
       </div>
     </header>
     <main>
       <div class="vertical-line"></div>
 
-      <div class = "createArticles-page">
+      <div class="createArticles-page">
         <h1>Create Article</h1>
-            <div class="boxes">
-                <div class = "create-box"> 
-                    
-                        <div class ="create-details">
-                            <p class ="create-article">Article Title</p>
-                            <div class = "article-title">
-                                <input type = "text">
-                            </div>
-                        </div>
+        <form id="create-article-form" action="" method="post">
+          <div class="boxes">
+            <div class="create-box">
+              <div class="create-title">
+                <div class="article-title">
+                  <p class="create-article">Article Title</p>
+                  <input type="text" name="title" id="input-title" />
+                </div>
+              </div>
 
-                        <div class ="create-details">
-                            <p class ="create-content">Article Content</p>
-                            <div class = "article-content">
-                                <input type = "text">
-                            </div>
-                        </div>
+              <div class="create-article-content">
+                <div class="article-content">
+                  <p class="create-content">Article Content</p>
+                  <textarea name="content" id="input-content"></textarea>
+                </div>
+              </div>
 
-                        <div class ="create-details">
-                            <p class ="create-image">Image</p>
-                            <div> 
-                                <img class = "article-img" src = "img/placeholder.png"> 
-                            </div> 
-                        </div>
-                        
-                        <div>
-                        <button class = "create-button" >
-                            Create
-                          </button>
-                        </div>
+              <div class="create-article-image">
+                <div class="article-img">
+                  <p class="create-image">Image</p>
+                  <input type="file" name="image" id="input-image" />
+                </div>
+              </div>
 
-                        
-                </div>            
+              <div class="create-button-section">
+                <input
+                  id="input-submit"
+                  type="submit"
+                  class="create-button"
+                  value="Create"
+                />
+              </div>
             </div>
-        </div>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>

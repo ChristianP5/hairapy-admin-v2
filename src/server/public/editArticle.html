@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/editArticle.css" />
+    <script src="js/env.js"></script>
+    <script src="js/isValidLogin.js"></script>
+    <script src="js/editArticle.js"></script>
+    <script src="js/logout.js"></script>
     <script src="js/index.js"></script>
     <title>Document</title>
   </head>
@@ -11,8 +15,8 @@
     <header>
       <ul class="nav-options focus">
         <li>
-            <a href="http://localhost:9000/index.html">
-                <div id="home-option" class="nav-option">
+          <a href="http://localhost:9000/index.html">
+            <div id="home-option" class="nav-option">
               <div class="nav-icon">
                 <img src="img/home_brown.png" alt="" />
               </div>
@@ -59,51 +63,64 @@
           </a>
         </li>
       </ul>
-      <div class = "log-out">
-        <a href ="http://localhost:9000/login.html">
-          <p> Logout</p>
+      <div id="log-out-button" class="log-out">
+        <a href="http://localhost:9000/login.html">
+          <p>Logout</p>
         </a>
       </div>
     </header>
     <main>
       <div class="vertical-line"></div>
 
-      <div class = "editArticle-page">
+      <div class="editArticle-page">
         <h1>Edit Article</h1>
-            <div class="boxes">
-                <div class = "edit-box"> 
-                    
-                        <div class ="edit-details">
-                            <p class ="edit-article">Article Title</p>
-                            <div class = "article-title">
-                                <input type = "text">
-                            </div>
-                        </div>
+        <form id="edit-article-form" action="" method="post">
+          <div class="boxes">
+            <div class="edit-box">
+              <div class="title-sect">
+                <p class="edit-article">Article Title</p>
+                <div class="article-title">
+                  <input type="text" name="title" id="input-title" />
+                </div>
+              </div>
 
-                        <div class ="edit-details">
-                            <p class ="edit-content">Article Content</p>
-                            <div class = "article-content">
-                                <input type = "text">
-                            </div>
-                        </div>
+              <div class="content-sect">
+                <p class="edit-content">Article Content</p>
+                <div class="article-content">
+                  <textarea name="content" id="input-content"></textarea>
+                </div>
+              </div>
 
-                        <div class ="edit-details">
-                            <p class ="edit-image">Image</p>
-                            <div> 
-                                <img class = "article-img" src = "img/placeholder.png"> 
-                            </div> 
-                        </div>
-                        
-                        <div>
-                        <button class = "update-button" >
-                            Update
-                          </button>
-                        </div>
+              <div class="image-sect">
+                <p class="edit-image">Previous Image</p>
+                <div>
+                  <img
+                    id="prev-image"
+                    class="article-img"
+                    src="img/placeholder.png"
+                  />
+                </div>
+              </div>
 
-                        
-                </div>            
+              <div class="new-image-sect">
+                <p class="edit-image">Image</p>
+                <div>
+                  <input type="file" name="image" id="input-image" />
+                </div>
+              </div>
+
+              <div class="submit-button-sect">
+                <input
+                  id="input-submit"
+                  class="update-button"
+                  type="submit"
+                  value="Update"
+                />
+              </div>
             </div>
-        </div>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>

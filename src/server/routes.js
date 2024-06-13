@@ -1,5 +1,6 @@
 const {
-    getRootHandler, getLostHandler
+    getRootHandler, getLostHandler,
+    postCaptchaHandler
 } = require('./handler');
 
 const path = require('path');
@@ -19,6 +20,11 @@ const routes = [
                 index: ['index.html']
             }
         }
+    },
+    {
+        method: 'POST',
+        path: '/captcha',
+        handler: postCaptchaHandler,
     },
     {
         path: '/{any*}',

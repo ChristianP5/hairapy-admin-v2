@@ -19,6 +19,7 @@
   "dependencies": {
     "@hapi/hapi": "^21.3.9",
     "@hapi/inert": "^7.1.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
   }
 }

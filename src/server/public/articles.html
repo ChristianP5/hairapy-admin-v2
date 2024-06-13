@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/articles.css" />
+    <script src="js/env.js"></script>
+    <script src="js/isValidLogin.js"></script>
+    <script src="js/articles.js"></script>
+    <script src="js/logout.js"></script>
     <script src="js/index.js"></script>
     <title>Document</title>
   </head>
@@ -11,8 +15,8 @@
     <header>
       <ul class="nav-options focus">
         <li>
-            <a href="http://localhost:9000/index.html">
-                <div id="home-option" class="nav-option">
+          <a href="http://localhost:9000/index.html">
+            <div id="home-option" class="nav-option">
               <div class="nav-icon">
                 <img src="img/home_brown.png" alt="" />
               </div>
@@ -59,9 +63,9 @@
           </a>
         </li>
       </ul>
-      <div class = "log-out">
-        <a href ="http://localhost:9000/login.html">
-          <p> Logout</p>
+      <div id="log-out-button" class="log-out">
+        <a href="http://localhost:9000/login.html">
+          <p>Logout</p>
         </a>
       </div>
     </header>
@@ -69,66 +73,19 @@
       <div class="vertical-line"></div>
       <div class="article-page">
         <div class="article-head">
-          <h1>Articles<h1>
-            <a href="http://localhost:9000/createArticles.html">
-              <button class = "create-button" >
-                <img class ="plus-icon" src = "img/plus_sign.png">
-                Create
-              </button>
-            </a>
+          <h1>Articles</h1>
+          <a href="createArticles.html">
+            <button class="create-button">
+              <img class="plus-icon" src="img/plus_sign.png" />
+              <p>Create</p>
+            </button>
+          </a>
         </div>
 
-        <div class="boxes">
-            <div class = "articles-box"> 
-              <div> 
-                <img class = "article-img" src = "img/placeholder.png"> 
-              </div>
-
-
-                  <div class ="article-details">
-                    <p class = "article-title">Article Title</p>
-                    <p class = "article-content">Article Content</p>
-                    <p class = "article-date"><br>Date: DDMMYYYY</p>
-                </div>
-                <div class="article-buttons">
-                  <a href="http://localhost:9000/editArticle.html">
-                    <button class = "edit-button">
-                      Edit
-                    </button>
-                  </a>
-                  <button class = "delete-button">
-                    Delete
-                  </button>
-                </div>
-
-          </div>
-
-          <div class = "articles-box"> 
-            <div> 
-              <img class = "article-img" src = "img/placeholder.png"> 
-            </div>
-              <div class ="article-details">
-                <p class = "article-title">Article Title</p>
-                <p class = "article-content">Article Content</p>
-                <p class = "article-date"><br>Date: DDMMYYYY</p>
-            </div>
-            <div class="article-buttons">
-              <a href="http://localhost:9000/editArticle.html">
-                <button class = "edit-button">
-                  Edit
-                </button>
-              </a>
-                <button class = "delete-button">
-                  Delete
-                </button>
-            </div>
-        </div>
-        </div>
-
-        
+        <section class="scroll-section">
+          <div class="boxes" id="articles-list"></div>
+        </section>
       </div>
-      
-
     </main>
   </body>
 </html>

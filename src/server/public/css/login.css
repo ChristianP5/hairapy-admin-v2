@@ -1,42 +1,55 @@
 body{
     font-family: 'Roboto', sans-serif;
     padding-top: 100px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-title{
     font-size: 2.5em;
+    width: 50vw;
     text-align: center;
-}
-.admin-box{
-    background-color: #C69E4C;
-    font-size: 1.75em;
-    width:540px;
-    height: 100px;
-    margin: auto;
-    padding-top: 1px;
-    position: absolute;
-    top: 32%;
-    left: 35%;
-    z-index: 1;
-    
-
+    transform: scale(1);
+    transition: transform 2s ease-in-out;
+    height: 200px;
 }
 
 .admin-box h2{
     text-align: center;
 }
 
-.signin-box{
+.login-box{
     background-color: #5271FF;
-    font-size: 1.5em;
-    margin: auto;
-    width: 800px;
-    height: 75px;
-    margin-top: 30px;
-    border-radius: 5px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+    line-height: 0;
+    width: 50%;
+    height: 30px;
+    margin: 10px 0 10px 0;
+    border: none;
+    transform: scale(1.0);
+    transition: ease-in-out 60ms transform, ease-in-out 60ms background-color;
+}
 
+.login-box:hover{
+    background-color: #627ef9;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: ease-in-out 60ms transform, ease-in-out 60ms background-color;
+}
 
+.login-pressed{
+    background-color: #686d8a;
+    transform: scale(1.00);
+    
+}
+
+.login-pressed:hover{
+    background-color: #686d8a;
+    transform: scale(1.00);
+    cursor: not-allowed;
 }
 
 .admin-box, .signin-box{
@@ -45,20 +58,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center; 
-    
 }
 
 
 .credentials-box{
     padding: 20px;
-    padding-top: 100px;
     background-color: #EFEFEF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(225, 46, 46, 0.1);
     border-radius: 5px;
     border: 2px solid #EFEFEF;
-    width: 800px;
-    height: 250px;
-    margin: auto;
+    width: 40vw;
+    height: 200px;
+    margin: 0 auto;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -67,13 +78,60 @@ body{
     
 }
 
+.credentials-form{
+    display: flex;
+    transform: translateY(-20px);
+}
+
+.credentials-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.credentials-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-box{
+    background-color: #C69E4C;
+    width: 20vw;
+    height: 100px;
+    line-height: 0;
+    font-size: 1.3rem;
+    transform: translateY(-60px);
+
+}
+
+.username-input, .password-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .username-input input[type="text"],
-.password-input input[type="text"]{
-    width: 700px;
-    height: 60px;
-    font-size: 30px;
+.password-input input[type="password"]
+{
+    width: 70%;
+    height: 40px;
     text-align: center;
     justify-content: center;
+    border: none;
+    margin: 4px 0 4px 0;
+    background-color: #161823;
+    color: #686d8a;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.username-input input[type="text"]::placeholder, .password-input input[type="password"]::placeholder{
+    color: #686d8a;
 }
 
 .password-input input[type="text"]{

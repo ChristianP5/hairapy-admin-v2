@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <script src="js/env.js"></script>
+    <script src="js/isValidLogin.js"></script>
+    <script src="js/index_load.js"></script>
+    <script src="js/logout.js"></script>
     <script src="js/index.js"></script>
     <title>Document</title>
   </head>
@@ -22,7 +26,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class = "dashboard-option">
           <a href="http://localhost:9000/predictions.html">
             <div id="predictions-option" class="nav-option">
               <div class="nav-icon">
@@ -34,7 +38,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class = "dashboard-option">
           <a href="http://localhost:9000/articles.html">
             <div id="articles-option" class="nav-option">
               <div class="nav-icon">
@@ -46,7 +50,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class = "dashboard-option">
           <a href="http://localhost:9000/users.html">
             <div id="users-option" class="nav-option">
               <div class="nav-icon">
@@ -59,30 +63,28 @@
           </a>
         </li>
       </ul>
-      <div class = "log-out">
-        <a href ="http://localhost:9000/login.html">
-          <p> Logout</p>
+      <div id="log-out-button" class="log-out">
+        <a href="http://localhost:9000/login.html">
+          <p>Logout</p>
         </a>
       </div>
     </header>
     <main>
       <div class="vertical-line"></div>
         <div class ="dashboard-page">
-          <h1>DASHBOARD<h1>
+            <h1>DASHBOARD<h1>
             <div class="boxes">
-              <div class = "box-row">
                 <div class = "predictions-box"> 
-                  Predictions
-                  <p>100</p>
+                  <h3>Predictions</h3>
+                  <p id="predictions-num"></p>
                 </div>
                 <div class = "articles-box">
-                  Articles 
-                  <p>100</p>
+                  <h3>Articles</h3> 
+                  <p id="articles-num"></p>
                 </div>  
-              </div>
                 <div class = "users-box"> 
-                  Users
-                  <p>100</p>
+                  <h3>Users</h3>
+                  <p id="users-num"></p>
                 </div>  
             </div>
         </div>

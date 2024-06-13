@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/users.css" />
+    <script src="js/env.js"></script>
+    <script src="js/isValidLogin.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/logout.js"></script>
     <script src="js/index.js"></script>
     <title>Document</title>
   </head>
@@ -59,9 +63,9 @@
           </a>
         </li>
       </ul>
-      <div class = "log-out">
-        <a href ="http://localhost:9000/login.html">
-          <p> Logout</p>
+      <div id="log-out-button" class="log-out">
+        <a href="http://localhost:9000/login.html">
+          <p>Logout</p>
         </a>
       </div>
     </header>
@@ -73,8 +77,14 @@
         </div>
 
         <div class = "username-details">
-          <p class ="username-title">Username</p>
-          <p class ="username-content">Username</p>
+          <section class="scroll-section">
+          <table id="users-table-list">
+            <tr>
+              <th>Username</th>
+              <th>Created At</th>
+            </tr>
+          </table>
+        </section>
         </div>
       </div>
 

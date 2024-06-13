@@ -33,36 +33,62 @@ html, body {
 
 /* NAV CSS START */
 header{
-    width: 20%;
+    width: 20vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-options{
+    display: flex;
+    flex-direction: column;
     margin: 20px 10px;
     padding-left: 20px;
     padding-top: 10px;
+    height: 50vh;
+    justify-content: space-evenly;
+
+}
+
+.nav-options>li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 
 .nav-options a {
     text-decoration: none; 
+    height: 50px;
+    display: flex;
+    align-items: center;
   }
 
 .nav-options p{
     padding: 15px;
 }
 
-.nav-options>li{
-
-}
 
 .nav-option{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 0px; 
-    margin: 0px 0px 0px 20px;
+    margin: 20px;
+    width: 100%;
+    color: #C69E4C;
+    transform: scale(1.00);
+    transition: color ease-in-out 200ms, transform ease-in-out 200ms;
+}
+
+.nav-option:hover{
+    transform: scale(1.05);
+    color: #d4bb89;
+    transition: color ease-in-out 200ms, transform ease-in-out 200ms;
 }
 
 
@@ -80,42 +106,69 @@ header{
 
 .nav-text{
     width: 50%;
-    font-size: 2.5em;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #C69E4C;
-
 }
+
 
 .nav-option.active .nav-text p {
     color: white;
 }
 
 .nav-options li.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
     background-color: #C69E4C;
+    margin: 0 0 0 20px;
+    width: 100%;
+}
+
+.nav-options li.active div{
+    margin: 0;
+}
+
+.nav-options li.active :hover{
+    background-color: #C69E4C;
+    transform: scale(1.00);
 }
 
 
 .log-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #FF5757;
+    margin: 0 0 40px 0;
     font-size: 2em;
     font-weight: bold;
-    padding: 120px;
-    margin-top: 250px;
+    width: 20%;
+    height: 100px;
 }
+
 
 .log-out a{
     text-decoration: none;
-    color:#FF5757
+    color: #FF5757;
+    transform: scale(1.0);
+    transition: color ease-in-out 200ms, transform ease-in-out 200ms;
+}
+
+.log-out a:hover{
+    color: #ff8c8c;
+    transform: scale(1.1);
+    transition: color ease-in-out 200ms, transform ease-in-out 200ms;
 }
 
 /* Main CSS start */
 
 .vertical-line {
     border-left: 2px solid black;
-    height: 775px; 
-    margin-right: 10px;
-    margin-top: 20px;
-    
+    height: 90vh; 
+    margin: 10px 40px 10px 20px;
+    align-self: center;
 }
 
 main{
@@ -127,11 +180,19 @@ main{
 .users-page{
     padding: 30px;
     margin-bottom: 1000px;
+    width: 60vw;
 }
 
 .username-details{
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 20px;
+}
+
+.scroll-section{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 110%;
+    height: 50vh;
 }
 
 .username-title{
@@ -143,4 +204,19 @@ main{
     font-size: 0.75em;
     font-weight: normal;
     padding-top: 40px;
+}
+
+#users-table-list{
+    width: 70vw;
+}
+
+.text-center{
+    text-align: center;
+}
+
+#users-table-list{
+    opacity: 0;
+    transition: opacity ease-in-out 400ms, transform ease-in-out 400ms;;
+    transform: translateY(20px); 
+    font-size: 1.5rem;
 }
