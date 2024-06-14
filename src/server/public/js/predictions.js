@@ -29,24 +29,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     predictions.forEach(pred => {
         const item = document.createElement('div');
         let date = pred.createdAt;
-        date = date.replace("T", " ");
-        date = date.replace("Z", " ");
         item.setAttribute('class', 'predictions-box');
 
         // Date values
-        const [year, month, day] = date.split(" ")[0].split('-');
-        let [hour, minute, second] = date.split(" ")[1].split(':');
-
-        second = Math.floor(second);
-
-        const score = 
-        second
-        + (minute * 60)
-        + (hour * 60 * 60)
-        + (day * 60 * 60 * 24)
-        + (month * 60 * 60 * 24 * 31)
-        + (year * 60 * 60 * 24 * 31 * 12);
-
+        const score = new Date(date).getTime();
 
         let confidenceScore = pred.confidenceScore;
         confidenceScore = Math.floor(confidenceScore);
