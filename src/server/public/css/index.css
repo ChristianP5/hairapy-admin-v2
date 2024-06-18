@@ -216,4 +216,77 @@ main{
     font-family: sans-serif;
 }
 
+.line{
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
 
+.logs-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 45vh;
+    margin: 20px 0 20px 0;
+}
+
+#logs-section{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform ease-in-out 200ms, opacity ease-in-out 200ms;
+}
+
+.uptime-section{
+    background-color: #EFEFEF;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.uptime-box{
+    background-color: #fffefe;
+    display: flex;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.uptime-icon{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uptime-icon div{
+    background-color: gray;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.uptime-name{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logs-graph-section{
+    width: 60%;
+    height: 100%;
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.logs-graph-section h3{
+    font-size: 1rem;
+}

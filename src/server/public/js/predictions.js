@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Date values
         const score = new Date(date).getTime();
 
+        date = date.replace("T", " ").replace("Z", " ");
+
         let confidenceScore = pred.confidenceScore;
         confidenceScore = Math.floor(confidenceScore);
         item.innerHTML = 

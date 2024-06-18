@@ -134,4 +134,72 @@ document.addEventListener('DOMContentLoaded', async () => {
         await logout();
     })
 
+    const loadCronLogs = async () => {
+
+        const svgWidth = 700;
+        const svgHeight = 250;
+        const margin = { top: 20, left: 30, bottom: 40, right: 40};
+
+        const svg = d3.select('#cron-deletion-graph')
+        .append('svg')
+        .attr("width", svgWidth)
+        .attr("height", svgHeight)
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        const logsResult = await fetch("/logs", {
+            method: 'GET',
+        })
+
+        const logsData = await logsResult.json();
+
+        
+        const logs = logsData.data.logs;
+
+        /*
+            logs = [
+                {
+                    date: "2024-06-15T17:00:05.168Z",
+                    value: {integer}
+                }
+            ]
+        */
+
+        // Parse the Dates and Values to acceptable format
+        const parseDate = d3.utcParse('%Y-%m-%dT%H:%M:%S.%LZ');
+        
+        logs.forEach(log => {
+            log.date = parseDate(log.date);
+            log.value = +log.value;
+        })
+
+        const x = d3.scaleUtc()
+        .domain(d3.extent(logs, log => log.date))
+        .range([0, svgWidth - margin.left - margin.right]);
+
+        svg.append("g")
+        .attr("transform", `translate(0, ${svgHeight - margin.top - margin.bottom})`)
+        .call(d3.axisBottom(x));
+
+        const y = d3.scaleLinear()
+        .domain([0, d3.max(logs, log => log.value)])
+        .nice()
+        .range([svgHeight - margin.bottom - margin.top, 0]);
+
+        svg.append("g")
+        .attr("transform", "translate(0, 0)")
+        .call(d3.axisLeft(y));
+
+        svg.append("path")
+        .datum(logs)
+        .attr("class", "line")
+        .attr("d", d3.line().x( log => x(log.date) ).y( log => y(log.value) ));
+
+        const logs_em = document.getElementById('logs-section');
+        logs_em.style.opacity = 1;
+        logs_em.style.transform = "translateY(0)";
+        
+    }
+    loadCronLogs();
+
 })

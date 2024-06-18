@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/env.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/isValidLogin.js"></script>
     <script src="js/index_load.js"></script>
     <script src="js/logout.js"></script>
@@ -87,6 +88,32 @@
                   <p id="users-num"></p>
                 </div>  
             </div>
+            <section id="logs-section" class="logs-section">
+              <ul class="uptime-section">
+                <li class="uptime-box">
+                  <div class="uptime-icon">
+                    <div></div>
+                  </div>
+                  <div class="uptime-name">
+                    <p>Server 1</p>
+                  </div>
+                </li>
+                <li class="uptime-box">
+                  <div class="uptime-icon">
+                    <div></div>
+                  </div>
+                  <div class="uptime-name">
+                    <p>Server 1</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="logs-graph-section">
+                <h3>Cron Job Deletions (past 6 days)</h1>
+                  <div id="cron-deletion-graph">
+
+                  </div>
+              </div>
+            </section>
         </div>
 
     </main>

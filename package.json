@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ChristianP5/hairapy-admin#readme",
   "dependencies": {
+    "@google-cloud/logging": "^11.1.0",
     "@hapi/hapi": "^21.3.9",
     "@hapi/inert": "^7.1.0",
     "dotenv": "^16.4.5",
