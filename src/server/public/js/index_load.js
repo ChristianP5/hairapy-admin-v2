@@ -123,6 +123,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         dashboard_boxes_em.style.opacity = 1;
         dashboard_boxes_em.style.transform = "translateY(0px)";
 
+        setTimeout(async () => {
+            const logs_em = document.getElementById('logs-section');
+            logs_em.style.opacity = 1;
+            logs_em.style.transform = "translateY(0)";
+        }, 800);
+
     }
     getAllUsers();
     
@@ -195,9 +201,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         .attr("class", "line")
         .attr("d", d3.line().x( log => x(log.date) ).y( log => y(log.value) ));
 
-        const logs_em = document.getElementById('logs-section');
-        logs_em.style.opacity = 1;
-        logs_em.style.transform = "translateY(0)";
+        const logs_section_em = document.getElementById('logs-graph-section');
+        logs_section_em.style.opacity = 1;
+        logs_section_em.style.transform = "translateY(0)";
         
     }
     loadCronLogs();

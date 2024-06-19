@@ -1,3 +1,4 @@
+const getServicesStats = require('../services/getServicesStatus');
 const listCronLogs = require('../services/listCronLogs');
 
 const getRootHandler = (request, h) => {
@@ -66,7 +67,24 @@ const getLogsHandler = async (request, h) => {
     return response;
 }
 
+const getServicesHandler = async (request, h) => {
+    const result = await getServicesStats();
+
+    const response = h.response({
+        status: 'success',
+        message: 'services retrieved successfully',
+        data: {
+            servicesStatus : result,
+        }
+    })
+
+    response.code(200);
+
+    return response;
+}
+
 module.exports = {
     getRootHandler, getLostHandler,
-    postCaptchaHandler, getLogsHandler
+    postCaptchaHandler, getLogsHandler,
+    getServicesHandler
 }

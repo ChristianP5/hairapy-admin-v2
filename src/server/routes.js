@@ -1,6 +1,7 @@
 const {
     getRootHandler, getLostHandler,
-    postCaptchaHandler, getLogsHandler
+    postCaptchaHandler, getLogsHandler,
+    getServicesHandler
 } = require('./handler');
 
 const path = require('path');
@@ -30,6 +31,11 @@ const routes = [
         method: 'GET',
         path: '/logs',
         handler: getLogsHandler,
+    },
+    {
+        method: 'GET',
+        path: '/services',
+        handler: getServicesHandler,
     },
     {
         path: '/{any*}',

@@ -8,6 +8,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/isValidLogin.js"></script>
     <script src="js/index_load.js"></script>
+    <script src="js/index_services.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/index.js"></script>
     <title>Document</title>
@@ -95,7 +96,7 @@
                     <div></div>
                   </div>
                   <div class="uptime-name">
-                    <p>Server 1</p>
+                    <p>Base Service</p>
                   </div>
                 </li>
                 <li class="uptime-box">
@@ -103,11 +104,11 @@
                     <div></div>
                   </div>
                   <div class="uptime-name">
-                    <p>Server 1</p>
+                    <p>Auth Service</p>
                   </div>
                 </li>
               </ul>
-              <div class="logs-graph-section">
+              <div class="logs-graph-section" id="logs-graph-section">
                 <h3>Cron Job Deletions (past 6 days)</h1>
                   <div id="cron-deletion-graph">
 
