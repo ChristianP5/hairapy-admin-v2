@@ -1,14 +1,8 @@
 const listCronLogs = require('../services/listCronLogs');
 
 const getRootHandler = (request, h) => {
-    const response = h.response({
-        status: 'success',
-        message: 'Welcome to Root!',
-    })
 
-    response.code(200);
-
-    return response;
+    return h.redirect('/index.html');
 }
 
 const getLostHandler = (request, h) => {
